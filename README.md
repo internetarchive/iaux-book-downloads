@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/internetarchive/iaux-book-downloads.svg?branch=master)](https://travis-ci.com/internetarchive/iaux-book-downloads)
+[![codecov](https://codecov.io/gh/internetarchive/iaux-book-downloads/branch/master/graph/badge.svg)](https://codecov.io/gh/internetarchive/iaux-book-downloads)
+
 # \<ia-book-downloads>
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
@@ -5,6 +8,10 @@ This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) reco
 ## Installation
 ```bash
 npm i ia-book-downloads
+```
+or
+```bash
+yarn add @internetarchive/ia-book-downloads
 ```
 
 ## Usage
@@ -16,31 +23,32 @@ npm i ia-book-downloads
 <ia-book-downloads></ia-book-downloads>
 ```
 
-## Linting with ESLint, Prettier, and Types
+Supply the element with an optional array of download options to immediately
+render. Each result can have these properties:
+
+```js
+{
+  type: 'Encrypted Adobe PDF', // Button text
+  url: '#', // The URL to the downloadable item
+  note: 'PDF files contain high quality images of pages.', // Optional note to render below the button
+}
+```
+
+## Styling
+
+```css
+ia-book-downloads {
+  --downloadButtonColor: #fff;
+  --downloadButtonBg: #547fba;
+  --externalButtonColor: #547fba;
+  --externalButtonBg: #fff;
+}
+```
+
+## Linting with ESLint
 To scan the project for linting errors, run
 ```bash
 npm run lint
-```
-
-You can lint with ESLint and Prettier individually as well
-```bash
-npm run lint:eslint
-```
-```bash
-npm run lint:prettier
-```
-
-To automatically fix many linting errors, run
-```bash
-npm run format
-```
-
-You can format using ESLint and Prettier individually as well
-```bash
-npm run format:eslint
-```
-```bash
-npm run format:prettier
 ```
 
 ## Testing with Karma
@@ -54,7 +62,6 @@ To run the tests in watch mode (for <abbr title="test driven development">TDD</a
 ```bash
 npm run test:watch
 ```
-
 
 ## Tooling configs
 
