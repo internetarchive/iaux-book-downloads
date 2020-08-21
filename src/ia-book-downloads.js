@@ -1,6 +1,5 @@
 import { html, LitElement } from 'lit-element';
 import bookDownloadsCSS from './styles/ia-book-downloads.js';
-import closeIcon from './icon_close.js';
 
 export class IABookDownloads extends LitElement {
   static get styles() {
@@ -60,7 +59,7 @@ export class IABookDownloads extends LitElement {
           <h3>Downloadable files</h3>
           ${this.formatsCount}
         </div>
-        <a href="#" class="close" @click=${this.unsetSelectedMenuOption}>${closeIcon}</a>
+        <a href="#" class="close" @click=${this.unsetSelectedMenuOption}><ia-icon icon="collapseSidebar"></ia-icon></a>
       </header>
       ${this.loanExpiryMessage}
       <ul>${this.renderDownloadOptions()}</ul>

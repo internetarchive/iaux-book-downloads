@@ -43,6 +43,11 @@ a.close {
   justify-self: end;
 }
 
+a.close ia-icon {
+  --iconWidth: 18px;
+  --iconHeight: 18px;
+}
+
 ul {
   padding: 0;
   margin: 0;

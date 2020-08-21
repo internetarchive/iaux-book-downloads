@@ -19,6 +19,8 @@
       --animationTiming: .25s;
       --iconFillColor: #fff;
       --iconStrokeColor: #fff;
+      --iconWidth: 28px;
+      --iconHeight: 28px;
       --activeButtonBg: #282828;
       --downloadButtonColor: #fff;
       --downloadButtonBg: #547fba;
@@ -68,8 +70,8 @@
       static get styles() {
         return [css`
           svg {
-            width: 40px;
-            height: 40px;
+            width: var(--iconWidth);
+            height: var(--iconHeight);
           }
         `, IAIcons.styles];
       }
