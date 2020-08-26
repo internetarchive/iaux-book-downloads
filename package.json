@@ -1,6 +1,6 @@
 {
   "name": "@internetarchive/ia-book-downloads",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Book downloads pane for ia-menu-slider",
   "author": "Shane Riley, Internet Archive",
   "license": "AGPL-3.0-only",
@@ -23,8 +23,8 @@
     "lit-element": "^2.2.1"
   },
   "devDependencies": {
-    "@internetarchive/ia-icons": "^0.5.0",
     "@internetarchive/ia-menu-slider": "0.0.2-alpha.09d6bce",
+    "@internetarchive/icon-dl": "^1.1.0",
     "@open-wc/eslint-config": "^2.0.0",
     "@open-wc/testing": "^2.0.0",
     "@open-wc/testing-karma": "^3.0.0",
