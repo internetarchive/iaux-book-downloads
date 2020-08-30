@@ -1,9 +1,4 @@
-import {
-  html,
-  fixture,
-  expect,
-  oneEvent,
-} from '@open-wc/testing';
+import { html, fixture, expect } from '@open-wc/testing';
 import sinon from 'sinon';
 import { IABookDownloads } from '../src/ia-book-downloads.js';
 
@@ -48,26 +43,6 @@ describe('<ia-book-downloads>', () => {
 
     expect(note).to.exist;
     expect(note.innerText).to.include(downloads[1].note);
-  });
-
-  it('emits a custom event to close the menu', async () => {
-    const el = await fixture(container(downloads));
-
-    setTimeout(() => (
-      el.unsetSelectedMenuOption(new Event('click'))
-    ));
-    const response = await oneEvent(el, 'menuTypeSelected');
-
-    expect(response).to.exist;
-  });
-
-  it('closes the menu when close element clicked', async () => {
-    IABookDownloads.prototype.unsetSelectedMenuOption = sinon.fake();
-
-    const el = await fixture(container(downloads));
-
-    el.shadowRoot.querySelector('.close').click();
-    expect(el.unsetSelectedMenuOption.callCount).to.equal(1);
   });
 
   it('uses a singular noun when one download given', async () => {

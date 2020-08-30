@@ -23,7 +23,7 @@
     "lit-element": "^2.2.1"
   },
   "devDependencies": {
-    "@internetarchive/ia-menu-slider": "0.0.2-alpha.09d6bce",
+    "@internetarchive/ia-menu-slider": "0.1.0-alpha.1b6f614",
     "@internetarchive/icon-dl": "^1.1.0",
     "@open-wc/eslint-config": "^2.0.0",
     "@open-wc/testing": "^2.0.0",
