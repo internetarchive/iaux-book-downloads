@@ -12,8 +12,8 @@ export default css`
 
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 0 2rem;
 }
 
 h2 {

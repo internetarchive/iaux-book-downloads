@@ -19,17 +19,6 @@ export class IABookDownloads extends LitElement {
     this.expiration = 0;
   }
 
-  unsetSelectedMenuOption(e) {
-    e.preventDefault();
-    this.dispatchEvent(new CustomEvent('menuTypeSelected', {
-      bubbles: true,
-      composed: true,
-      detail: {
-        id: 'downloads',
-      },
-    }));
-  }
-
   get formatsCount() {
     const count = this.downloads.length;
     return count ? html`<p>${count} format${count > 1 ? 's' : ''}</p>` : html``;
@@ -55,11 +44,8 @@ export class IABookDownloads extends LitElement {
   render() {
     return html`
       <header>
-        <div>
-          <h3>Downloadable files</h3>
-          ${this.formatsCount}
-        </div>
-        <a href="#" class="close" @click=${this.unsetSelectedMenuOption}><ia-icon icon="collapseSidebar"></ia-icon></a>
+        <h3>Downloadable files</h3>
+        ${this.formatsCount}
       </header>
       ${this.loanExpiryMessage}
       <ul>${this.renderDownloadOptions()}</ul>
