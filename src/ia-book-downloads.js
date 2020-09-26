@@ -1,4 +1,5 @@
 import { html, LitElement } from 'lit-element';
+import { nothing } from 'lit-html';
 import bookDownloadsCSS from './styles/ia-book-downloads.js';
 
 export class IABookDownloads extends LitElement {
@@ -10,6 +11,7 @@ export class IABookDownloads extends LitElement {
     return {
       downloads: { type: Array },
       expiration: { type: Number },
+      renderHeader: { type: Boolean },
     };
   }
 
@@ -17,6 +19,7 @@ export class IABookDownloads extends LitElement {
     super();
     this.downloads = [];
     this.expiration = 0;
+    this.renderHeader = false;
   }
 
   get formatsCount() {
@@ -41,12 +44,21 @@ export class IABookDownloads extends LitElement {
     ));
   }
 
-  render() {
+  get header() {
+    if (!this.renderHeader) {
+      return nothing;
+    }
     return html`
       <header>
         <h3>Downloadable files</h3>
         ${this.formatsCount}
       </header>
+    `;
+  }
+
+  render() {
+    return html`
+      ${this.header}
       ${this.loanExpiryMessage}
       <ul>${this.renderDownloadOptions()}</ul>
       <p>To access downloaded books, you need Adobe-compliant software on your device. The Internet Archive will administer this loan, but Adobe may also collect some information.</p>
