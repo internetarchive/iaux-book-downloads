@@ -80,8 +80,9 @@
     const downloadMenu = {
       icon: html`<ia-icon-dl></ia-icon-dl>`,
       label: 'Downloadable files',
+      menuDetails: '(2 formats)',
       id: 'downloads',
-      component: html`<ia-book-downloads .downloads=${downloads}></ia-book-downloads>`
+      component: html`<ia-book-downloads .d,ownloads=${downloads}></ia-book-downloads>`,
     };
     menuSlider.menus = [downloadMenu];
     menuSlider.open = true;
