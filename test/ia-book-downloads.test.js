@@ -68,4 +68,21 @@ describe('<ia-book-downloads>', () => {
 
     expect(el.shadowRoot.querySelector('header p')).not.to.exist;
   });
+
+  it('does not render header by default', async () => {
+    const el = await fixture(container());
+
+    expect(el.shadowRoot.querySelector('header')).to.be.null;
+  });
+  it('does render header if turned on', async () => {
+    const el = await fixture(
+      html`<ia-book-downloads .downloads=${downloads} ?renderHeader=${true}></ia-book-downloads>`,
+    );
+    const header = el.shadowRoot.querySelector('header');
+    const title = header.querySelector('h3');
+    const details = header.querySelector('p');
+    expect(header).to.exist;
+    expect(title).to.exist;
+    expect(details).to.exist;
+  });
 });
