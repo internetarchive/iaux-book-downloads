@@ -4,7 +4,7 @@ export default css`
 :host {
   display: block;
   height: 100%;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 0;
   overflow-y: auto;
   font-size: 1.4rem;
   box-sizing: border-box;
@@ -67,13 +67,14 @@ p {
 
 .button {
   display: inline-block;
-  padding: .3rem 1rem;
+  padding: .6rem 1rem;
   font-size: 1.4rem;
   text-decoration: none;
   color: var(--downloadButtonColor);
   text-shadow: 1px 1px #484848;
   border-radius: 4px;
   background: var(--downloadButtonBg);
+  border: 1px solid var(--createButtonBorderColor);
 }
 
 .external {
