@@ -70,17 +70,17 @@ p {
   padding: .6rem 1rem;
   font-size: 1.4rem;
   text-decoration: none;
-  color: var(--downloadButtonColor);
   text-shadow: 1px 1px #484848;
   border-radius: 4px;
+  color: var(--downloadButtonColor);
   background: var(--downloadButtonBg);
-  border: 1px solid var(--createButtonBorderColor);
+  border: 1px solid var(--downloadButtonBorderColor);
 }
 
 .external {
   color: var(--externalButtonColor);
   text-shadow: none;
-  border: 1px solid var(--externalButtonColor);
   background: var(--externalButtonBg);
+  border: 1px solid var(--externalButtonBorderColor);
 }
 `;

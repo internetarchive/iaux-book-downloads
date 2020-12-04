@@ -1,6 +1,6 @@
 {
   "name": "@internetarchive/ia-book-downloads",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Book downloads pane for ia-menu-slider",
   "author": "Shane Riley, Isa Herico Velasco, Internet Archive",
   "license": "AGPL-3.0-only",
