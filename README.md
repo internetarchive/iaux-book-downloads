@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.com/internetarchive/iaux-book-downloads.svg?branch=master)](https://travis-ci.com/internetarchive/iaux-book-downloads)
 [![codecov](https://codecov.io/gh/internetarchive/iaux-book-downloads/branch/master/graph/badge.svg)](https://codecov.io/gh/internetarchive/iaux-book-downloads)
 
+# Deprecated.  See [@internetarchive/bookreader](https://github.com/internetarchive/bookreader)
+
 # \<ia-book-downloads>
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
